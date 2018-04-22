@@ -1,17 +1,20 @@
 #define CATCH_CONFIG_RUNNER
 #include <catch.hpp>
 #include <cmath>
-#include <iostream>
 
-void checksum (int zahl)
+int checksum (int zahl)
 {
-	while (zahl > 0) {
-		checksum += zahl % 10;
-		zahl /= 10;
+	int sum = 0;
+	{
+		while (zahl > 0) {
+			sum += zahl % 10;
+			zahl /= 10;
+		}
+	return sum;
 	}
 }
 
-TEST_CASE("describe_checksum", "[checksum]")
+TEST_CASE("testing_checksum", "[checksum]")
 {
   REQUIRE(checksum(24) == 6);
   REQUIRE(checksum(1111111) == 7);
@@ -20,4 +23,5 @@ TEST_CASE("describe_checksum", "[checksum]")
 
 main(int argc, char* argv[]){
 	return Catch::Session().run(argc, argv);
+	return 0;
 }
