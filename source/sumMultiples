@@ -1,0 +1,22 @@
+#define CATCH_CONFIG_RUNNER
+#include <catch.hpp>
+#include <cmath>
+
+int sumMultiples(){
+	for(i=1; i<=100; i++){
+		if i % 3 == 0 || i % 5 == 0
+				sum += i;
+		else
+	}
+}
+
+TEST_CASE("describe_sumMultiples", "[sumMultiples]")
+{
+  REQUIRE(sumMultiples() == );
+  REQUIRE(sumMultiples() == );
+  REQUIRE(sumMultiples() == );
+}
+
+main(int argc, char* argv[]){
+	return Catch::Session().run(argc, argv);
+}
