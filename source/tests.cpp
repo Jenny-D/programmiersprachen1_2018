@@ -4,14 +4,9 @@
 
 int gcd(int a, int b)
 {
-  return 1;
-}
-
-int describe_gcd(int a, int b)
-{
   if (b == 0)
     return a;
-  else return describe_gcd(b, a%b);
+  else return gcd(b, a%b);
 }
 
 TEST_CASE("describe_gcd", "[gcd]")
